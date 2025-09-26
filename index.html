@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">Urban Living</h1>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📞</span>
+                    <span>(555) 123-4567</span>
+                </div>
+                <div class="contact-item">
+                    <span>✉️</span>
+                    <span>info@urbanliving.com</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li><a href="#" class="nav-link active">Home</a></li>
+                <li><a href="#" class="nav-link">Properties</a></li>
+                <li><a href="#" class="nav-link">Buy</a></li>
+                <li><a href="#" class="nav-link">Rent</a></li>
+                <li><a href="#" class="nav-link">Services</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="content-area">
+            <section class="hero">
+                <h1>Find Your Dream Home</h1>
+                <p>Discover premium properties in the heart of the city with our expert guidance</p>
+                <a href="#" class="cta-button">Browse Properties</a>
+            </section>
+
+            <section class="properties-section">
+                <h2>Featured Properties</h2>
+                <div class="properties-grid">
+                    <article class="property-card">
+                        <div class="property-image">🏠 Modern Apartment</div>
+                        <div class="property-details">
+                            <h3>Luxury Downtown Loft</h3>
+                            <p>Spacious 2-bedroom loft in the heart of downtown with modern amenities and city views.</p>
+                            <div class="property-price">$450,000</div>
+                            <div class="property-features">
+                                <span class="feature">2 Beds</span>
+                                <span class="feature">2 Baths</span>
+                                <span class="feature">1,200 sqft</span>
+                                <span class="feature">Parking</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">❤️ Add to Favorites</button>
+                        </div>
+                    </article>
+
+                    <article class="property-card">
+                        <div class="property-image">🏡 Family Home</div>
+                        <div class="property-details">
+                            <h3>Suburban Family Home</h3>
+                            <p>Beautiful 4-bedroom home in quiet neighborhood with large backyard and garage.</p>
+                            <div class="property-price">$650,000</div>
+                            <div class="property-features">
+                                <span class="feature">4 Beds</span>
+                                <span class="feature">3 Baths</span>
+                                <span class="feature">2,400 sqft</span>
+                                <span class="feature">Garage</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">❤️ Add to Favorites</button>
+                        </div>
+                    </article>
+
+                    <article class="property-card">
+                        <div class="property-image">🏢 Condo</div>
+                        <div class="property-details">
+                            <h3>Modern City Condo</h3>
+                            <p>Stylish 1-bedroom condo with balcony and access to building amenities.</p>
+                            <div class="property-price">$320,000</div>
+                            <div class="property-features">
+                                <span class="feature">1 Bed</span>
+                                <span class="feature">1 Bath</span>
+                                <span class="feature">800 sqft</span>
+                                <span class="feature">Balcony</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">❤️ Add to Favorites</button>
+                        </div>
+                    </article>
+
+                    <article class="property-card">
+                        <div class="property-image">🏠 Townhouse</div>
+                        <div class="property-details">
+                            <h3>Contemporary Townhouse</h3>
+                            <p>Three-story townhouse with modern design and private patio area.</p>
+                            <div class="property-price">$520,000</div>
+                            <div class="property-features">
+                                <span class="feature">3 Beds</span>
+                                <span class="feature">2.5 Baths</span>
+                                <span class="feature">1,800 sqft</span>
+                                <span class="feature">Patio</span>
+                            </div>
+                            <button class="favorite-btn" onclick="toggleFavorite(this)">❤️ Add to Favorites</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="services-section">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">🏠</div>
+                        <h3>Property Sales</h3>
+                        <p>Expert guidance through the entire buying and selling process</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">🔍</div>
+                        <h3>Property Search</h3>
+                        <p>Personalized property search based on your specific needs</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">💰</div>
+                        <h3>Market Analysis</h3>
+                        <p>Comprehensive market analysis and property valuation services</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Property Management</h3>
+                        <p>Full-service property management for investment properties</p>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- Contact Form Section -->
+            <section class="contact-form">
+                <h2>Contact Our Team</h2>
+                <p>Fill out this form and we'll get back to you within 24 hours!</p>
+                
+                <form id="contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="firstName" class="form-control" required>
+                            <div class="error-message" id="first-name-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="lastName" class="form-control" required>
+                            <div class="error-message" id="last-name-error"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                            <div class="error-message" id="phone-error"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget Range</label>
+                            <select id="budget" name="budget" class="form-control">
+                                <option value="">Select Budget</option>
+                                <option value="under-300k">Under $300,000</option>
+                                <option value="300k-500k">$300,000 - $500,000</option>
+                                <option value="500k-750k">$500,000 - $750,000</option>
+                                <option value="over-750k">Over $750,000</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us about your dream home..." required></textarea>
+                        <div class="error-message" id="message-error"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="newsletter" name="newsletter"> 
+                            Subscribe to our newsletter for market updates
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%;">Send Message</button>
+                    <div class="success-message" id="form-success">Thank you! Your message has been sent successfully!</div>
+                </form>
+            </section>
+        </div>
+
+        <aside>
+            <section class="sidebar-section">
+                <h3>Property Search</h3>
+                <form>
+                    <div class="filter-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type">
+                            <option>All Types</option>
+                            <option>Apartment</option>
+                            <option>House</option>
+                            <option>Condo</option>
+                            <option>Townhouse</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-range">Max Price</label>
+                        <input type="range" id="price-range" min="100000" max="1000000" value="500000">
+                        <span id="price-display">$500,000</span>
+                    </div>
+                    <div class="filter-group">
+                        <label for="bedrooms">Bedrooms</label>
+                        <select id="bedrooms">
+                            <option>Any</option>
+                            <option>1+</option>
+                            <option>2+</option>
+                            <option>3+</option>
+                            <option>4+</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="location">Location</label>
+                        <input type="text" id="location" placeholder="Enter city or zip code">
+                    </div>
+                    <button type="button" id="search-btn" class="cta-button" style="width: 100%; margin-top: 1rem;">Search Properties</button>
+                </form>
+                <div id="search-results" class="search-results hidden"></div>
+            </section>
+
+            <section class="sidebar-section">
+                <h3>Latest News</h3>
+                <article class="news-item">
+                    <h4>Market Trends 2025</h4>
+                    <p>Housing market shows steady growth with new opportunities emerging in suburban areas.</p>
+                </article>
+                <article class="news-item">
+                    <h4>New Development Opens</h4>
+                    <p>Luxury residential complex now accepting pre-orders with modern amenities and green spaces.</p>
+                </article>
+                <article class="news-item">
+                    <h4>First-Time Buyer Tips</h4>
+                    <p>Essential advice for first-time homebuyers navigating today's competitive market.</p>
+                </article>
+            </section>
+
+            <section class="sidebar-section">
+                <h3>Quick Contact</h3>
+                <p>Ready to find your dream home? Get in touch with our expert team today.</p>
+                <div class="counter-display">
+                    Property Views Today: <span id="view-counter">0</span>
+                </div>
+                <button id="contact-btn" class="cta-button" style="display: block; text-align: center; width: 100%;">Contact Agent</button>
+                <button id="reset-counter-btn" class="cta-button" style="display: block; text-align: center; width: 100%; margin-top: 0.5rem; background-color: #6b7280;">Reset Counter</button>
+            </section>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <section class="footer-section">
+                <h4>Urban Living</h4>
+                <p>Your trusted partner in finding the perfect home. We've been serving the community for over 15 years with dedication and expertise.</p>
+            </section>
+            <section class="footer-section">
+                <h4>Quick Links</h4>
+                <p><a href="#">Home</a></p>
+                <p><a href="#">Properties</a></p>
+                <p><a href="#">Services</a></p>
+                <p><a href="#">About Us</a></p>
+                <p><a href="#">Contact</a></p>
+            </section>
+            <section class="footer-section">
+                <h4>Services</h4>
+                <p><a href="#">Buy Property</a></p>
+                <p><a href="#">Sell Property</a></p>
+                <p><a href="#">Rent Property</a></p>
+                <p><a href="#">Property Management</a></p>
+                <p><a href="#">Market Analysis</a></p>
+            </section>
+            <section class="footer-section">
+                <h4>Contact Info</h4>
+                <p>📍 123 Real Estate Ave<br>City, State 12345</p>
+                <p>📞 (555) 123-4567</p>
+                <p>✉️ info@urbanliving.com</p>
+                <p>🌐 www.urbanliving.com</p>
+            </section>
+        </div>
+    </footer>
+    
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+
+</body>
+</html>
